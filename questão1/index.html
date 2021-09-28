@@ -1,0 +1,41 @@
+1 – Analise o seguinte código HTML:
+1. <html>
+2. <head>
+3. <script language="JavaScript">
+4. function submitForm() {
+5. var xhr=null;
+6. try {
+7. xhr = new object();
+8. }catch(e) {
+9.
+10. }
+11. xhr.onreadystatechange = function() {
+12. document.ajax.dyn.value="Wait server...";
+13. if(xhr.readyState == 4){
+14. if(xhr.status == 200) {
+15. document.ajax.dyn.value="Recebido:" + xhr.responseText;
+16. }else{
+17. document.ajax.dyn.value="Erro: " + xhr.status;
+18. }
+19. }
+20. };
+21. xhr.open("GET", "data.xml", true);
+22. xhr.send(null);
+23. }
+24. </script>
+25. </head>
+26. <body>
+27. <form method="POST" name="ajax" action="">
+28. <input type="submit" value="Submit" ONCLICK="submitForm()">
+29. <input type="text" name="dyn" value="">
+30. </form>
+31. </body>
+32. </html>
+Para que a requisição assíncrona seja possível, a variável “xhr” (linha 7) deveria ser instanciada com qual objeto?
+(A) responseXML.
+(B) MIME.
+(C) DOMParser.
+(D) setRequestReader.
+(E) XMLHttpRequest  
+
+RESPOSTA : LETRA E
